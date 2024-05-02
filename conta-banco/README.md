@@ -1,18 +1,11 @@
-## Getting Started
+## DIO - Trilha Java Básico
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+A classe `ContaTerminal` permite a criação de uma conta bancária básica interagindo com o usuário por meio do terminal. Ela solicita informações como número da conta, agência, nome do titular da conta e saldo, e depois imprime essas informações de volta para o usuário.
 
-## Folder Structure
+1. Compile o arquivo `ContaTerminal.java` em seu terminal:
+   ```bash
+   javac ContaTerminal.java
 
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+2. Execute o programa compilado:
+   ```bash
+   java ContaTerminal
