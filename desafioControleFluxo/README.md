@@ -1,18 +1,12 @@
-## Getting Started
+# Contador
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este é um projeto simples em Java que demonstra o uso de exceções para lidar com parâmetros inválidos.
 
-## Folder Structure
+## Descrição
 
-The workspace contains two folders by default, where:
+O programa permite ao usuário inserir dois números inteiros e, em seguida, realiza uma contagem a partir do primeiro número até o segundo número. Se o primeiro número for maior que o segundo, uma exceção é lançada e uma mensagem de erro é exibida.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Requisitos
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- Java Development Kit (JDK) instalado
+- Ambiente de desenvolvimento Java configurado
