@@ -14,7 +14,7 @@ public class SimulacaoBancaria {
             System.out.println("\t1. Depositar");
             System.out.println("\t2. Sacar");
             System.out.println("\t3. Consultar saldo");
-            System.out.println("\t4. Encerrar");
+            System.out.println("\t0. Encerrar");
 
             int opcao = scanner.nextInt(); 
             
@@ -26,7 +26,7 @@ public class SimulacaoBancaria {
                         try {
                             double valorDepositar = scanner.nextDouble();
                             saldo = depositar(valorDepositar, saldo);
-                            System.out.println("Valor depositado com sucesso! Seu novo saldo é: R$ " + saldo);
+                            System.out.println("Saldo atual: " + saldo);
                             valorValido = true;
                         } catch (Exception e) {
                             System.out.println("Valor inválido! Tente novamente.");
@@ -44,9 +44,9 @@ public class SimulacaoBancaria {
                             valorValidoSaque = true;
                             if (saldo >= valorSacar){
                                 saldo = sacar(valorSacar, saldo);
-                                System.out.println("Operação concluida! seu novo saldo é R$ " + saldo);
+                                System.out.println("Saldo atual: " + saldo);
                             }else{
-                                System.out.println("Operação cancelada! seu saldo de R$ " + saldo + " é insuficiente.");
+                                System.out.println("Saldo insuficiente.");
                             }
                         } catch (Exception e) {
                             System.out.println("Valor inválido! Tente novamente.");
@@ -55,10 +55,10 @@ public class SimulacaoBancaria {
                     } while (!valorValidoSaque);
                     break;
                 case 3:
-                System.out.println("Seu saldo é: R$ " + saldo);
+                System.out.println("Saldo atual: " + saldo);
                     break;
-                case 4:
-                    System.out.println("\tEncerrando...\n");
+                case 0:
+                    System.out.println("Programa encerrado.");
                     continuar = false;
                     break;
                 default:
@@ -67,7 +67,7 @@ public class SimulacaoBancaria {
             
         }
     }
-
+    
     static String formatarValor(double valor) {
         DecimalFormat df = new DecimalFormat("#.##");
         return df.format(valor);
