@@ -1,36 +1,38 @@
-package jva-colections.src.list.OperacoesBasicas;
-// package main.java.list.OperacoesBasicas;
+package jva_colections.src.list.OperacoesBasicas;
 
 public class Item {
-    //atributos
+	// atributos
 	private String nome;
 	private double preco;
-	private int quant;
+	private int quantidade;
 
-	public Item(String nome, double preco, int quant) {
+	// construtor
+	public Item(String nome, double preco, int quantidade){
 		this.nome = nome;
 		this.preco = preco;
-		this.quant = quant;
+		this.quantidade = quantidade;
 	}
 
-	public String getNome() {
+	// getters
+	public String getNome(){
 		return nome;
 	}
-
-	public double getPreco() {
+	public double getPreco(){
 		return preco;
 	}
-
-	public int getQuant() {
-		return quant;
+	public int getQuantidade(){
+		return quantidade;
 	}
 
 	@Override
 	public String toString() {
 		return "Item{" +
-				"nome='" + nome + '\'' +
-				", preco=" + preco +
-				", quant=" + quant +
+				"nome ='" + nome + '\'' +
+				", preco =" + preco +
+				", quantidade =" + quant +
 				'}';
 	}
 }
+
+
+
