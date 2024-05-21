@@ -1,19 +1,18 @@
-package jva-colections.src.list.OperacoesBasicas;
-// package main.java.list.OperacoesBasicas;
+package jva_colections.src.list.OperacoesBasicas;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class CarrinhoDeCompras {
-    //atributos
+    // atributo -> uma lista
     private List<Item> itemList;
-
-    public CarrinhoDeCompras() {
+    // construtor -> uma lista vazia
+    public CarrinhoDeCompras(){
         this.itemList = new ArrayList<>();
     }
 
-    public void adicionarItem(String nome, double preco, int quantidade) {
-        Item item = new Item(nome, preco, quantidade);
+    public void adicionarItem(String nome, double preco, int quantidade){
+        Item item = new Item(nome, preco, quantidade)
         this.itemList.add(item);
     }
 
@@ -36,7 +35,7 @@ public class CarrinhoDeCompras {
         if (!itemList.isEmpty()) {
         for (Item item : itemList) {
             double valorItem = item.getPreco() * item.getQuant();
-            valorTotal += valorItem; //valorTotal = valorTotal + valorItem;
+            valorTotal += valorItem;
         }
         return valorTotal;
         } else {
@@ -58,6 +57,8 @@ public class CarrinhoDeCompras {
             "itens=" + itemList +
             '}';
     }
+
+}
 
     public static void main(String[] args) {
         // Criando uma instância do carrinho de compras
