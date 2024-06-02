@@ -10,7 +10,6 @@ public class AgendaContatos {
   public AgendaContatos() {
     this.contatosSet = new HashSet<>();
   }
-
   public void adicionarContato(String nome, int numero) {
     contatosSet.add(new Contato(nome, numero));
   }
