@@ -1,18 +1,30 @@
-## Getting Started
+# Projeto de Bootcamp de Desenvolvimento Java
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este projeto simula um sistema de bootcamp para desenvolvedores, onde é possível criar cursos e mentorias, inscrever desenvolvedores em bootcamps e acompanhar o progresso dos desenvolvedores nos conteúdos.
 
-## Folder Structure
+## Estrutura do Projeto
 
-The workspace contains two folders by default, where:
+O projeto está organizado no pacote `dominio` e contém as seguintes classes principais:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- `Conteudo`: Classe abstrata que define a estrutura básica de um conteúdo, incluindo métodos para cálculo de XP e getters/setters para título e descrição.
+- `Curso`: Subclasse de `Conteudo` que representa um curso com uma carga horária.
+- `Mentoria`: Subclasse de `Conteudo` que representa uma mentoria com uma data específica.
+- `Dev`: Classe que representa um desenvolvedor, contendo métodos para inscrição em bootcamps, progressão em conteúdos e cálculo de XP total.
+- `Bootcamp`: Classe que representa um bootcamp, contendo uma lista de conteúdos e desenvolvedores inscritos.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+### Classes e Métodos
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+#### Conteudo
 
-## Dependency Management
+Classe abstrata que define a estrutura de um conteúdo.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```java
+public abstract class Conteudo {
+    protected static final double XP_PADRAO = 10d;
+    private String titulo;
+    private String descricao;
+    
+    public abstract double calcularXP();
+    
+    // Getters e Setters
+}
